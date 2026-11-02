@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202432;
+    background: #f3f5f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+    font-size: clamp(25px, 4vw, 34px);
+}
+
+.header p {
+    margin: 0;
+    color: #687083;
+    line-height: 1.6;
+}
+
+.panel {
+    margin-bottom: 22px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e3e7ef;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(29, 42, 68, 0.05);
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.petunjuk {
+    margin: -5px 0 18px;
+    color: #687083;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr repeat(3, 0.8fr) auto;
+    gap: 12px;
+    align-items: end;
+    padding: 16px 0;
+    border-top: 1px solid #edf0f5;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.field input {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #d8deea;
+    border-radius: 8px;
+    outline: none;
+    font: inherit;
+}
+
+.field input:focus {
+    border-color: #5368d5;
+    box-shadow: 0 0 0 3px rgba(83, 104, 213, 0.12);
+}
+
+button {
+    padding: 11px 15px;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-tambah {
+    color: #3446ad;
+    background: #edf0ff;
+}
+
+.btn-hitung {
+    margin-top: 18px;
+    color: #ffffff;
+    background: #3446ad;
+}
+
+.btn-hapus {
+    color: #a12d3b;
+    background: #fff0f1;
+    font-size: 13px;
+}
+
+.pesan-error {
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    color: #8f1d2c;
+    background: #fff0f1;
+    border: 1px solid #ffd4d8;
+    border-radius: 9px;
+    line-height: 1.6;
+}
+
+.pesan-error p {
+    margin: 4px 0;
+}
+
+.tabel-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e9edf3;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    color: #4b5670;
+    background: #f6f7fb;
+}
+
+.status-lulus {
+    color: #167345;
+    font-weight: 700;
+}
+
+.status-tidak {
+    color: #b42332;
+    font-weight: 700;
+}
+
+.catatan {
+    margin: 14px 0 0;
+    color: #687083;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .input-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .btn-hapus {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 22px 10px;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-hapus {
+        grid-column: auto;
+    }
+}
